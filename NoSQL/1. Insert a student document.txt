@@ -1,0 +1,6 @@
+db.students.insertOne({
+  first_name: "Sai",
+  last_name: "Gujjarlapudi",
+  email: "sai@example.com",
+  dob: ISODate("2004-06-20")
+});

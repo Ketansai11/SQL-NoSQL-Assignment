@@ -1,0 +1,13 @@
+db.students.updateOne(
+  { _id: ObjectId("665fc241a79a8e5ff8a91c22") },
+  {
+    $set: {
+      address: {
+        street: "123 Main St",
+        city: "Vijayawada",
+        state: "Andhra Pradesh",
+        postal_code: "520004"
+      }
+    }
+  }
+);

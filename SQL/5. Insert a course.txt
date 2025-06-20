@@ -1,0 +1,2 @@
+INSERT INTO course (id, name, description)
+VALUES (001, 'Mathematics', 'Introductory math course');

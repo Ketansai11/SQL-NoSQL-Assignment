@@ -1,0 +1,8 @@
+db.students.aggregate([
+  {
+    $project: {
+      name: "$first_name",
+      course_count: { $size: "$enrollments" }
+    }
+  }
+]);

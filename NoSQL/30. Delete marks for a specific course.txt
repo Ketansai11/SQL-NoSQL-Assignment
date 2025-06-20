@@ -1,0 +1,6 @@
+db.students.updateMany(
+  { "enrollments.course_id": "CSE001" },
+  {
+    $set: { "enrollments.$.marks": [] }
+  }
+);

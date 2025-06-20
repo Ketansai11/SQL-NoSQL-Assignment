@@ -1,0 +1,11 @@
+db.students.aggregate([
+  { $match: { _id: ObjectId("665fc241a79a8e5ff8a91c22") } },
+  { $unwind: "$enrollments" },
+  { $unwind: "$enrollments.marks" },
+  {
+    $group: {
+      _id: "$_id",
+      avg_score: { $avg: "$enrollments.marks.score" }
+    }
+  }
+]);

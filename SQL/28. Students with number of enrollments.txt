@@ -1,0 +1,3 @@
+SELECT student_id, COUNT(course_id) AS enrolled_courses
+FROM enrollment
+GROUP BY student_id;

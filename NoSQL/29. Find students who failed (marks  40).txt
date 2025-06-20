@@ -1,0 +1,1 @@
+db.students.find({ "enrollments.marks.score": { $lt: 40 } });

@@ -1,0 +1,11 @@
+db.students.aggregate([
+  { $unwind: "$enrollments" },
+  { $unwind: "$enrollments.marks" },
+  {
+    $group: {
+      _id: "$_id",
+      name: { $first: "$first_name" },
+      total: { $sum: "$enrollments.marks.score" }
+    }
+  }
+]);

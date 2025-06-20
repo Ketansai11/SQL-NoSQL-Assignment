@@ -1,0 +1,13 @@
+db.students.updateOne(
+  { _id: ObjectId("665fc241a79a8e5ff8a91c22")},
+  {
+    $push: {
+      enrollments: {
+        $each: [
+          { course_id: "CSE002", enrolled_on: new Date(), marks: [] },
+          { course_id: "CSE003", enrolled_on: new Date(), marks: [] }
+        ]
+      }
+    }
+  }
+);

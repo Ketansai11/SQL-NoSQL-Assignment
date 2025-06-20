@@ -1,0 +1,3 @@
+UPDATE address
+SET city = 'Guntur'
+WHERE student_id = 1;

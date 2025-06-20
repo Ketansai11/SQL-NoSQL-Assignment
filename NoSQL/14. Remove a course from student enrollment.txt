@@ -1,0 +1,8 @@
+db.students.updateOne(
+  { _id: ObjectId("665fc241a79a8e5ff8a91c22") },
+  {
+    $pull: {
+      enrollments: { course_id: "CSE001" }
+    }
+  }
+);

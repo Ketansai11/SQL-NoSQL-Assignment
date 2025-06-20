@@ -1,0 +1,5 @@
+db.courses.insertOne({
+  course_id: "CSE001",
+  course_name: "Computer Science",
+  credits: 4
+});

@@ -1,0 +1,1 @@
+db.students.find({ "enrollments.3": { $exists: true } });

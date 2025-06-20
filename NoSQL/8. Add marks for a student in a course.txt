@@ -1,0 +1,15 @@
+db.students.updateOne(
+  {
+    _id: ObjectId("665fc241a79a8e5ff8a91c22"),
+    "enrollments.course_id": "CSE001"
+  },
+  {
+    $push: {
+      "enrollments.$.marks": {
+        assessment_name: "Midterm",
+        score: 92,
+        max_score: 100
+      }
+    }
+  }
+);

@@ -1,0 +1,4 @@
+db.students.findOne(
+  { _id: ObjectId("665fc241a79a8e5ff8a91c22") , "enrollments.course_id": "CSE001" },
+  { "enrollments.$": 1 }
+);

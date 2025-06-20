@@ -1,0 +1,14 @@
+db.students.aggregate([
+  { $unwind: "$enrollments" },
+  { $match: { "enrollments.course_id": "CSE001" } },
+  { $unwind: "$enrollments.marks" },
+  {
+    $group: {
+      _id: "$_id",
+      total_score: { $sum: "$enrollments.marks.score" },
+      name: { $first: "$first_name" }
+    }
+  },
+  { $sort: { total_score: -1 } },
+  { $limit: 3 }
+]);

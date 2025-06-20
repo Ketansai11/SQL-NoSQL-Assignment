@@ -1,0 +1,3 @@
+UPDATE student
+SET phone = '0987654321'
+WHERE id = 1;

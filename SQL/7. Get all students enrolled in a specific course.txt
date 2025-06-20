@@ -1,0 +1,5 @@
+SELECT s.*
+FROM student s
+JOIN enrollment e ON s.id = e.student_id
+JOIN course c ON c.id = e.course_id
+WHERE c.name = 'Mathematics';
